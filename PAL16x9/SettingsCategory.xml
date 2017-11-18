@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="12">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>40</posx>
+			<posy>32</posy>
+			<width>175</width>
+			<height>174</height>
+			<itemgap>2</itemgap>
+			<onleft>500</onleft>
+			<onright>5</onright>
+			<orientation>vertical</orientation>
+			<animation type="Conditional" condition="ControlGroup(5).HasFocus()">
+				<effect type="fade" time="200" start="100" end="30" delay="50"/>
+				<effect type="slide" start="0,0" end="-120,0" time="200"/>
+			</animation>
+			<animation type="Conditional" condition="!ControlGroup(5).HasFocus()">
+				<effect type="fade" time="200" start="30" end="100" delay="50"/>
+				<effect type="slide" start="-120,0" end="0,0" time="200"/>
+			</animation>
+		</control>
+
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>200</posx>
+			<posy>32</posy>
+			<width>295</width>
+			<height>174</height>
+			<itemgap>2</itemgap>
+			<onleft>3</onleft>
+			<orientation>vertical</orientation>
+			<animation type="Conditional" condition="!ControlGroup(5).HasFocus()">
+				<effect type="fade" time="200" start="100" end="30" delay="50"/>
+			</animation>
+			<animation type="Focus">
+				<effect type="fade" time="200" start="100" end="170" delay="50"/>
+				<effect type="slide" start="0,0" end="-150,0" time="200"/>
+			</animation>
+			<animation type="UnFocus">
+				<effect type="slide" start="-150,0" end="0,0" time="200"/>
+			</animation>
+		</control>
+
+		<control type="button" id="7">
+			<description>Default Button</description>
+			<align>left</align>
+		</control>
+
+		<control type="radiobutton" id="8">
+			<description>Default Radio Button</description>
+			<radioposx>276</radioposx>
+			<align>left</align>
+		</control>
+
+		<control type="spincontrolex" id="9">
+			<description>Default Spin Control</description>
+			<align>left</align>
+		</control>
+
+		<control type="button" id="10">
+			<description>Default Category Button</description>
+			<align>left</align>
+			<width>200</width>
+		</control>
+
+		<include>GlobalBackgroundOL</include>
+
+		<control type="button" id="500">
+			  <description>Knop links boven</description>
+			  <posx>0</posx>
+			  <posy>29</posy>
+			  <width>51</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texturefocus>buttons/links_boven_aan.png</texturefocus>
+			  <texturenofocus>buttons/links_boven_beschikbaar.png</texturenofocus>
+			  <align></align>
+			  <aligny></aligny>
+			  <onclick>ActivateWindow(Settings)</onclick>
+			  <onfocus>-</onfocus>
+			  <onunfocus>-</onunfocus>
+			  <onright>3</onright>
+			  <label>31044</label>
+			  <font>Title</font>
+			  <textcolor>ffb87e53</textcolor>
+			  <focusedcolor>ffed6504</focusedcolor>
+			  <textwidth>80</textwidth>
+			  <textoffsetx>5</textoffsetx>
+			  <textoffsety>-26</textoffsety>
+		</control>
+
+		<control type="image" id="600">
+			  <description>Knop links onder</description>
+			  <posx>0</posx>
+			  <posy>121</posy>
+			  <width>51</width>
+			  <height>88</height>
+			  <texture>buttons/links_onder_uit.png</texture>
+		</control>
+
+		<control type="image" id="700">
+			  <description>Knop rechts boven</description>
+			  <posx>349</posx>
+			  <posy>29</posy>
+			  <width>65</width>
+			  <height>88</height>
+			  <texture>buttons/rechts_boven_uit.png</texture>
+		</control>
+
+		<control type="image" id="800">
+			  <description>Knop rechts onder</description>
+			  <posx>349</posx>
+			  <posy>121</posy>
+			  <width>65</width>
+			  <height>88</height>
+			  <texture>buttons/rechts_onder_uit.png</texture>
+		</control>
+
+		<control type="image" id="110">
+			  <description>Streepje tussen knoppen links</description>
+			  <posx>0</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+
+		<control type="image" id="111">
+			  <description>Streepje tussen knoppen rechts</description>
+			  <posx>376</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+		
+		<control type="image" id="111">
+			  <description>Streepje tussen knoppen rechts</description>
+			  <posx>387</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+
+		<!-- <include>Tijd</include>
+
+		<include>Speed</include>
+
+		<include>Equalizer</include> -->
+
+	</controls>
+
+</window>

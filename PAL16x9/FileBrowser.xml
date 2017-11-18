@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalOverlay</include>
+
+		<control type="group">
+			<posx>5</posx>
+			<posy>5</posy>
+
+			<control type="image">
+				<posx></posx>
+				<posy></posy>
+				<width>405</width>
+				<height>240</height>
+				<texture border="22">other_textures/ContentPanel.png</texture>
+			</control>
+
+			<control type="label" id="411">
+				<description>Heading</description>
+				<posx>10</posx>
+				<posy>10</posy>
+				<width>405</width>
+				<align>center</align>
+				<font>Medium</font>
+				<label>1023</label>
+			</control>
+
+			<control type="label" id="412">
+				<description>Path</description>
+				<posx>10</posx>
+				<posy>30</posy>
+				<align>center</align>				
+				<width>450</width>
+				<haspath>true</haspath>
+			</control>
+			
+			<control type="grouplist" id="9000">
+				<posx>60</posx>
+				<posy>50</posy>
+				<itemgap>2</itemgap>
+				<orientation>horizontal</orientation>
+				<defaultcontrol>414</defaultcontrol>
+
+				<control type="button" id="413">
+					<description>Ok</description>
+					<width>150</width>
+					<label>186</label>
+					<onup>414</onup>
+					<ondown>413</ondown>
+				</control>
+
+				<control type="button" id="414">
+					<description>Cancel</description>
+					<width>150</width>
+					<label>222</label>
+					<onup>413</onup>
+					<ondown>414</ondown>
+				</control>
+
+			</control>
+
+			<control type="list" id="450">
+				<posx>10</posx>
+				<posy>80</posy>
+				<width>450</width>
+				<height>130</height>
+				<onback>9000</onback>
+
+				<itemlayout height="20">
+
+					<control type="image">
+						<posx>10</posx>
+						<posy>80</posy>
+						<align>center</align>						<width>450</width>
+						<height>30</height>
+						<texture border="2">other_textures/ButtonNF.png</texture>
+					</control>
+
+					<control type="label">
+						<posx>30</posx>
+						<posy>-8</posy>
+						<align>center</align>
+						<width>350</width>
+						<height>35</height>
+						<textcolor>FFDB6613</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+
+				<focusedlayout height="20">
+
+					<control type="image">
+						<width>350</width>
+						<height>20</height>
+						<align>center</align>
+						<texture border="5">other_textures/ButtonFO.png</texture>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(450)">Conditional</animation>
+					</control>
+
+					<control type="label">
+						<posx>30</posx>
+						<posy>-8</posy>
+						<align>center</align>
+						<width>350</width>
+						<height>35</height>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+
+			</control>
+		</control>
+
+	</controls>
+
+</window>

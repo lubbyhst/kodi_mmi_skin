@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<fonts>
+	<fontset id="default" unicode="true">
+
+		<font>
+			<name>Title</name>
+			<filename>Verdanab.ttf</filename>
+			<size>18</size>
+		</font>
+
+		<font>
+			<name>Max</name>
+			<filename>Verdanab.ttf</filename>
+			<size>64</size>
+		</font>
+		<font>
+			<name>Home</name>
+			<filename>Verdanab.ttf</filename>
+			<size>32</size>
+		</font>
+		
+		<font>
+			<name>Large</name>
+			<filename>Verdanab.ttf</filename>
+			<size>18</size>
+		</font>
+		
+		<font>
+			<name>Medium</name>
+			<filename>Verdanab.ttf</filename>
+			<size>16</size>
+		</font>
+		
+		<font>
+			<name>Small</name>
+			<filename>Verdanab.ttf</filename>
+			<size>12</size>
+		</font>
+
+		<font>
+			<name>Smaller</name>
+			<filename>Verdanab.ttf</filename>
+			<size>8</size>
+		</font>
+
+		<font>
+			<name>Min</name>
+			<filename>Verdanab.ttf</filename>
+			<size>6</size>
+		</font>
+
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>12</size>
+		</font>
+
+	</fontset>
+</fonts>

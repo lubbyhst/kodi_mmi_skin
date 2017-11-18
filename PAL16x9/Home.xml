@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="10000">
+	<defaultcontrol always="true">500</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalBackground</include>
+		<include>GlobalBackgroundOL</include>
+
+		<control type="image" id="12">
+			  <description>Afbeelding Audi A4</description>
+			  <posx>46</posx>
+			  <posy>30</posy>
+			  <width>306</width>
+			  <height>180</height>
+			  <texture>afbeelding_audi_a4.png</texture>
+			  <aspectratio>keep</aspectratio>
+			  <visible>!Window.IsVisible(VideoOverlay.xml)+!Window.IsVisible(MusicOverlay.xml)</visible>
+		</control>
+
+		<control type="group" id="20">
+		<visible>!Window.IsVisible(VideoOverlay.xml)</visible>
+
+		<control type="image" id="21">
+			<posx>39</posx>
+			<posy>34</posy>
+			<width>32</width>
+			<height>171</height>
+			<texture>boog.png</texture>
+		</control>
+
+			<control type="label" id="1">
+				<description>Playing Details</description>
+				<posx>55</posx>
+				<posy>25</posy>
+				<width>130</width>
+				<height>130</height>
+				<wrapmultiline>true</wrapmultiline>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[MusicPlayer.Artist][CR][CR]$INFO[MusicPlayer.Title][CR][CR]$INFO[MusicPlayer.Album][CR][CR][CR][CR]</label>
+				<font>Small</font>
+				<textcolor>FFae7c57</textcolor>
+			</control>
+			
+			<control type="label" id="1">
+				<description>Playing Details</description>
+				<posx>75</posx>
+				<posy>95</posy>
+				<width>140</width>
+				<height>130</height>
+				<label>[CR][CR][CR][CR]$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+				<font>Small</font>
+				<textcolor>FFae7c57</textcolor>
+			</control>
+
+			<control type="image" id="11">
+				  <description>CD Cover</description>
+				  <posx>192</posx>
+				  <posy>42</posy>
+				  <width>155</width>
+				  <height>155</height>
+				  <texture>$INFO[MusicPlayer.Cover]</texture>
+				  <!--<aspectratio>keep</aspectratio>-->
+			</control>
+
+			<control type="progress" id="12">
+				  <description>Progress bar audio</description>
+				  <posx>45</posx>
+				  <posy>193</posy>
+				  <width>314</width>
+				  <height>30</height>
+				  <reveal>false</reveal>
+				  <texturebg>-</texturebg>
+				  <lefttexture>-</lefttexture>
+				  <midtexture>other_textures/progress/progress_middle.png</midtexture>
+				  <righttexture>-</righttexture>
+				  <info>Player.Progress</info>
+			</control>
+
+		</control>
+
+		<control type="image" id="10">
+			  <description>Streepje tussen knoppen links</description>
+			  <posx>-2</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+
+		<control type="image" id="11">
+			  <description>Streepje tussen knoppen rechts</description>
+			  <posx>376</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+		
+		<control type="image" id="11">
+			  <description>Streepje tussen knoppen rechts</description>
+			  <posx>392</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+		
+
+		<control type="button" id="500">
+			  <description>Knop links boven</description>
+			  <posx>0</posx>
+			  <posy>29</posy>
+			  <width>51</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texturefocus>buttons/links_boven_aan.png</texturefocus>
+			  <texturenofocus>buttons/links_boven_beschikbaar.png</texturenofocus>
+			  <align></align>
+			  <aligny></aligny>
+			  <onclick>ActivateWindow(Music)</onclick>
+			  <onfocus>-</onfocus>
+			  <onunfocus>-</onunfocus>
+			  <onup>500</onup>
+			  <ondown>600</ondown>
+			  <onleft>500</onleft>
+			  <onright>700</onright>
+			  <label>31004</label>
+			  <font>Title</font>
+			  <textcolor>ffb87e53</textcolor>
+			  <focusedcolor>ffed6504</focusedcolor>
+			  <textwidth>100</textwidth>
+			  <textoffsetx>5</textoffsetx>
+			  <textoffsety>-26</textoffsety>
+		</control>
+
+		<control type="button" id="600">
+			  <description>Knop links onder</description>
+			  <posx>0</posx>
+			  <posy>121</posy>
+			  <width>51</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texturefocus>buttons/links_onder_aan.png</texturefocus>
+			  <texturenofocus>buttons/links_onder_beschikbaar.png</texturenofocus>
+			  <align></align>
+			  <aligny></aligny>
+			  <onclick>ActivateWindow(Videos)</onclick>
+			  <onfocus>-</onfocus>
+			  <onunfocus>-</onunfocus>
+			  <onup>500</onup>
+			  <ondown>600</ondown>
+			  <onleft>600</onleft>
+			  <onright>800</onright>
+			  <label>31003</label>
+			  <font>Title</font>
+			  <textcolor>ffb87e53</textcolor>
+			  <focusedcolor>ffed6504</focusedcolor>
+			  <textwidth>100</textwidth>
+			  <textoffsetx>5</textoffsetx>
+			  <textoffsety>92</textoffsety>
+		</control>
+
+		<control type="button" id="700">
+			  <description>Knop rechts boven</description>
+			  <posx>349</posx>
+			  <posy>29</posy>
+			  <width>65</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texturefocus>buttons/rechts_boven_aan.png</texturefocus>
+			  <texturenofocus>buttons/rechts_boven_beschikbaar.png</texturenofocus>
+			  <align></align>
+			  <aligny></aligny>
+			  <onclick>ActivateWindow(settings)</onclick>
+			  <onfocus>-</onfocus>
+			  <onunfocus>-</onunfocus>
+			  <onup>700</onup>
+			  <ondown>800</ondown>
+			  <onleft>500</onleft>
+			  <onright>700</onright>
+			  <label>31012</label>
+			  <font>Title</font>
+			  <textcolor>ffb87e53</textcolor>
+			  <focusedcolor>ffed6504</focusedcolor>
+			  <textwidth>170</textwidth>
+			  <textoffsetx>-40</textoffsetx>
+			  <textoffsety>-26</textoffsety>
+		</control>
+
+		<control type="button" id="800">
+			  <description>Bilder</description>
+			  <posx>349</posx>
+			  <posy>121</posy>
+			  <width>65</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texturefocus>buttons/rechts_onder_aan.png</texturefocus>
+			  <texturenofocus>buttons/rechts_onder_beschikbaar.png</texturenofocus>
+			  <align></align>
+			  <aligny></aligny>
+			  <onclick>ActivateWindow(Pictures)</onclick>
+			  <onfocus>-</onfocus>
+			  <onunfocus>-</onunfocus>
+			  <onup>700</onup>
+			  <ondown>800</ondown>
+			  <onleft>600</onleft>
+			  <onright>700</onright>
+			  <label>31005</label>
+			  <font>Title</font>
+			  <textcolor>ffb87e53</textcolor>
+			  <focusedcolor>ffed6504</focusedcolor>
+			  <textwidth>170</textwidth>
+			  <textoffsetx>-20</textoffsetx>
+			  <textoffsety>92</textoffsety>
+		</control>
+
+		<include>Tijd</include>
+
+		<include>Weather</include>
+
+		<include>Equalizer</include>
+
+	</controls>
+
+</window>

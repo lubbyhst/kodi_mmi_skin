@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="skin.audi_rns_e"
+	version="0.0.17"
+	name="Audi RNS-E"
+	provider-name=" ">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+	</requires>
+	<extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+		<res width="415" height="245" default="true" folder="PAL16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Skin</summary>
+		<description>'AudiRns' is a lookalike of the oem version of Audi's Rns-e</description>
+	</extension>
+</addon>

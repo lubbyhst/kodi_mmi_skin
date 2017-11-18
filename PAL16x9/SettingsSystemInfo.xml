@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="7">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>GlobalBackgroundOL</include>
+		<include>BackgroundOV</include>
+
+		<control type="group">
+			<posy>30</posy>
+
+			<control type="grouplist" id="9000">
+				<posx>-10</posx>
+				<posy>2</posy>
+				<width>150</width>
+				<height>200</height>
+				<itemgap>2</itemgap>
+				<onleft>500</onleft>
+				<onright>-</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+
+				<control type="button" id="95">
+					<description>General</description>
+					<width>200</width>
+					<label>20037</label>
+				</control>
+
+				<control type="button" id="94">
+					<description>Storage</description>
+					<width>200</width>
+					<label>13277</label>
+				</control>
+
+				<control type="button" id="96">
+					<description>Network</description>
+					<width>200</width>
+					<label>13279</label>
+				</control>
+
+				<control type="button" id="97">
+					<description>Video</description>
+					<width>200</width>
+					<label>13280</label>
+				</control>
+
+				<control type="button" id="98">
+					<description>Hardware</description>
+					<width>200</width>
+					<label>13281</label>
+				</control>
+			</control>
+
+			<control type="grouplist">
+				<posx>150</posx>
+				<width>200</width>
+				<height>300</height>
+				<itemgap>0</itemgap>
+
+				<control type="label" id="25">
+					<description>Spacer</description>
+					<width>150</width>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="52">
+					<description>XBMC XBE BUILD Version</description>
+					<font>Smaller</font>
+					<height>10</height>
+					<scroll>yes</scroll>
+				</control>
+
+				<control type="label" id="25">
+					<description>Spacer</description>
+					<width>150</width>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="21">
+					<description>CPU Text</description>
+					<font>Smaller</font>
+					<height>10</height>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+				</control>
+
+				<control type="progress" id="22">
+					<description>CPU BAR</description>
+					<width>200</width>
+					<info>System.CPUUsage</info>
+				</control>
+
+				<control type="label" id="23">
+					<description>Memory Text</description>
+					<font>Smaller</font>
+					<height>10</height>
+					<label>$LOCALIZE[31030] $INFO[system.memory(used.percent)]</label>
+				</control>
+
+				<control type="progress" id="24">
+					<description>Memory BAR</description>
+					<font>Smaller</font>
+					<width>200</width>
+					<info>system.memory(used)</info>
+				</control>
+
+				<control type="label" id="25">
+					<description>Spacer</description>
+					<width>150</width>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="3">
+					<description>Label 3</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="4">
+					<description>Label 4</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="5">
+					<description>Label 5</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="6">
+					<description>Label 6</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="7">
+					<description>Label 7</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="8">
+					<description>Label 8</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="9">
+					<description>Label 9</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="10">
+					<description>Label 10</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+				<control type="label" id="11">
+					<description>Label 11</description>
+					<font>Smaller</font>
+					<height>10</height>
+				</control>
+
+			</control>
+
+		</control>
+
+		<control type="image" id="10">
+			  <description>Streepje tussen knoppen links</description>
+			  <posx>0</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+
+		<control type="image" id="11">
+			  <description>Streepje tussen knoppen rechts</description>
+			  <posx>376</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+		
+		<control type="image" id="11">
+			  <description>Streepje tussen knoppen rechts</description>
+			  <posx>385</posx>
+			  <posy>116</posy>
+			  <width>30</width>
+			  <height>6</height>
+			  <visible>true</visible>
+			  <texture>buttons/button_seperator.png</texture>
+			  <aspectratio>keep</aspectratio>
+		</control>
+
+		<control type="button" id="500">
+			  <description>Knop links boven</description>
+			  <posx>0</posx>
+			  <posy>29</posy>
+			  <width>51</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texturefocus>buttons/links_boven_aan.png</texturefocus>
+			  <texturenofocus>buttons/links_boven_beschikbaar.png</texturenofocus>
+			  <align></align>
+			  <aligny></aligny>
+			  <onclick>ActivateWindow(settings)</onclick>
+			  <onfocus>-</onfocus>
+			  <onunfocus>-</onunfocus>
+			  <onup>500</onup>
+			  <ondown>500</ondown>
+			  <onleft>500</onleft>
+			  <onright>9000</onright>
+			  <label>31044</label>
+			  <font>Title</font>
+			  <textcolor>ffb87e53</textcolor>
+			  <focusedcolor>ffed6504</focusedcolor>
+			  <textwidth>80</textwidth>
+			  <textoffsetx>5</textoffsetx>
+			  <textoffsety>-26</textoffsety>
+		</control>
+
+		<control type="image" id="600">
+			  <description>Knop links onder</description>
+			  <posx>0</posx>
+			  <posy>121</posy>
+			  <width>51</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texture>buttons/links_onder_uit.png</texture>
+		</control>
+
+		<control type="image" id="700">
+			  <description>Knop rechts boven</description>
+			  <posx>349</posx>
+			  <posy>29</posy>
+			  <width>65</width>
+			  <height>88</height>
+			  <visible>true</visible>
+			  <texture>buttons/rechts_boven_uit.png</texture>
+		</control>
+
+		<control type="image" id="800">
+			  <description>Knop rechts onder</description>
+			  <posx>349</posx>
+			  <posy>121</posy>
+			  <width>65</width>
+			  <height>88</height>
+			  <texture>buttons/rechts_onder_uit.png</texture>
+		</control>
+
+		<include>Tijd</include>
+
+		<include>Speed</include>
+
+		<include>Equalizer</include>
+
+	</controls>
+
+</window>

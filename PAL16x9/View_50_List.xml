@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+
+<includes>
+
+	<include name="View_50_List">
+	
+		<description>List View (id=50)</description>
+
+		<include>GlobalBackgroundOL</include>
+
+		<control type="image" id="21">
+			<posx>39</posx>
+			<posy>34</posy>
+			<width>32</width>
+			<height>171</height>
+			<texture>boog.png</texture>
+		</control>
+
+		<description>Container</description>
+		<control type="list" id="50">
+			<posx>36</posx>
+			<posy>30</posy>
+			<width>310</width>
+			<height>177</height>
+			<onleft>500</onleft>
+			<onright>60</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<pagecontrol>60</pagecontrol>
+			<viewtype label="535">list</viewtype>
+			<scrolltime>200</scrolltime>
+			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
+				<effect type="fade" start="100" end="50" time="200" />
+				<effect type="zoom" center="860,360" start="100" end="90" time="200" />
+			</animation>
+
+			<description>Item layout niet gefocussed</description>
+			<itemlayout width="280" height="29">
+
+				<control type="label">
+					<posx>40</posx>
+					<width>217</width>
+					<height>29</height>
+					<font>Medium</font>
+					<textcolor>ffff6a00</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+				</control>
+
+				<control type="label">
+					<posx>257</posx>
+					<width>50</width>
+					<height>29</height>
+					<font>Medium</font>
+					<textcolor>ffff6a00</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<scroll>false</scroll>
+				</control>
+
+			</itemlayout>
+
+			<description>Item layout wel gefocussed</description>
+			<focusedlayout width="280" height="29">
+
+				<control type="label" id="15">
+					<posx>40</posx>
+					<width>267</width>
+					<height>29</height>
+					<font>Medium</font>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
+					<scroll>true</scroll>
+				</control>
+
+				<control type="image">
+					<posx>0</posx>
+					<width>36</width>
+					<height>29</height>
+					<texture>other_textures/pointer0.png</texture>
+					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					<visible>substring(Container.Position(15),0)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<width>36</width>
+					<height>29</height>
+					<texture>other_textures/pointer1.png</texture>
+					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					<visible>substring(Container.Position(15),1)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<width>36</width>
+					<height>29</height>
+					<texture>other_textures/pointer2.png</texture>
+					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					<visible>substring(Container.Position(15),2)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<width>36</width>
+					<height>29</height>
+					<texture>other_textures/pointer3.png</texture>
+					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					<visible>substring(Container.Position(15),3)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<width>36</width>
+					<height>29</height>
+					<texture>other_textures/pointer4.png</texture>
+					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					<visible>substring(Container.Position(15),4)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<width>36</width>
+					<height>29</height>
+					<texture>other_textures/pointer5.png</texture>
+					<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(50)">Conditional</animation>
+					<visible>substring(Container.Position(15),5)</visible>
+				</control>
+
+
+			</focusedlayout>
+
+		</control>
+
+		<!--<control type="image">
+			<description>Weergave Icoon</description>
+			<posx>180</posx>
+			<posy>50</posy>
+			<width>30</width>
+			<height>30</height>
+			<fadetime>100</fadetime>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+			<bordersize>8</bordersize>
+			<visible>!IsEmpty(ListItem.Icon)</visible>
+		</control>-->
+
+		<!--<control type="scrollbar" id="60">
+			<posx>329</posx>
+			<posy>25</posy>
+			<height>191</height>
+			<onleft>50</onleft>
+			<onright>60</onright>
+			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
+			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
+		</control>-->
+
+		<!--<control type="label">
+			<description>Tijdelijk label tbv naam Icon</description>
+			<posx>255</posx>
+			<posy>210</posy>
+			<width>175</width>
+			<height>24</height>
+			<font>Small</font>
+			<scroll>true</scroll>
+			<label>$INFO[ListItem.Icon]$INFO[Container.Position(15), - ]</label>
+		</control>-->
+
+	</include>
+
+</includes>

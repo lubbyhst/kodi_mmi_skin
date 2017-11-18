@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="129">
+  <defaultcontrol always="true">19</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <controls>
+    <include>GlobalOverlay</include>
+    <control type="group">
+      <posx>45</posx>
+      <posy>40</posy>
+      <control type="image">
+        <posx>-20</posx>
+        <posy>-20</posy>
+        <width>350</width>
+        <height>200</height>
+        <texture border="22">other_textures/ContentPanel.png</texture>
+      </control>
+      <control type="label" id="0">
+        <description>Path</description>
+        <posx>10</posx>
+        <posy>5</posy>
+        <width>300</width>
+        <align>center</align>
+        <font>Medium</font>
+        <label>31061</label>
+      </control>
+      <control type="group" id="17">
+        <defaultcontrol>19</defaultcontrol>
+        <control type="button" id="19">
+          <description>Cancel</description>
+          <posx>1</posx>
+          <posy>25</posy>
+          <width>115</width>
+          <label>222</label>
+          <onup>11</onup>
+          <ondown>19</ondown>
+        </control>
+        <control type="button" id="11">
+          <description>Browse</description>
+          <posx>117</posx>
+          <posy>25</posy>
+          <width>130</width>
+          <label>1024</label>
+          <onup>18</onup>
+          <ondown>19</ondown>
+        </control>
+        <control type="button" id="18">
+          <description>Ok</description>
+          <posx>230</posx>
+          <posy>25</posy>
+          <width>80</width>
+          <label>186</label>
+          <onup>18</onup>
+          <ondown>11</ondown>
+        </control>
+      </control>
+      <control type="label" id="0">
+        <description>Name Label</description>
+        <posx>10</posx>
+        <posy>40</posy>
+        <width>165</width>
+        <label>31060</label>
+      </control>
+      <control type="button" id="12">
+        <description>Name</description>
+        <posx>170</posx>
+        <posy>40</posy>
+        <label>-</label>
+        <width>130</width>
+        <align>right</align>
+        <textoffsetx>20</textoffsetx>
+      </control>
+      <control type="list" id="10">
+        <posx>0</posx>
+        <posy>80</posy>
+        <width>300</width>
+        <height>70</height>
+        <itemlayout height="20">
+          <control type="image">
+            <width>200</width>
+            <height>20</height>
+            <texture border="2">other_textures/ButtonNF.png</texture>
+          </control>
+          <control type="label">
+            <posx>20</posx>
+            <width>200</width>
+            <info>ListItem.Label</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="20">
+          <control type="image">
+            <width>300</width>
+            <height>20</height>
+            <texture border="5">other_textures/ButtonFO.png</texture>
+            <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(10)">Conditional</animation>
+          </control>
+          <control type="label">
+            <posx>20</posx>
+            <width>300</width>
+            <info>ListItem.Label</info>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+  </controls>
+</window>
+
