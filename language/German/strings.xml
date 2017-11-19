@@ -68,5 +68,7 @@
   <string id="31061">Auswahl Speicherort</string>
   <string id="31062">Titel zur&#252;ck</string>
   <string id="31063">Titel vor</string>
-  <string id="31064">Wiedergabe starten</string>
+  <string id="31064">Wiedergabe fortfahren</string>
+  <string id="31065">Vorspulen stoppen</string>
+  <string id="31066">Zur&#252;ckspulen stoppen</string>
 </strings>
