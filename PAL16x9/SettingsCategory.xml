@@ -13,7 +13,7 @@
 			<width>175</width>
 			<height>174</height>
 			<itemgap>2</itemgap>
-			<onleft>500</onleft>
+			<onleft>-</onleft>
 			<onright>5</onright>
 			<orientation>vertical</orientation>
 			<animation type="Conditional" condition="ControlGroup(5).HasFocus()">
@@ -23,7 +23,7 @@
 			<animation type="Conditional" condition="!ControlGroup(5).HasFocus()">
 				<effect type="fade" time="200" start="30" end="100" delay="50"/>
 				<effect type="slide" start="-120,0" end="0,0" time="200"/>
-			</animation>
+			</animation>	
 		</control>
 
 		<control type="grouplist" id="5">
@@ -34,6 +34,7 @@
 			<height>174</height>
 			<itemgap>2</itemgap>
 			<onleft>3</onleft>
+			<onright>-</onright>			
 			<orientation>vertical</orientation>
 			<animation type="Conditional" condition="!ControlGroup(5).HasFocus()">
 				<effect type="fade" time="200" start="100" end="30" delay="50"/>
@@ -47,7 +48,7 @@
 			</animation>
 		</control>
 
-		<control type="button" id="7">
+ 		<control type="button" id="7">
 			<description>Default Button</description>
 			<align>left</align>
 		</control>
@@ -62,13 +63,14 @@
 			<description>Default Spin Control</description>
 			<align>left</align>
 		</control>
-
+		
 		<control type="button" id="10">
 			<description>Default Category Button</description>
 			<align>left</align>
 			<width>200</width>
 		</control>
-
+		
+ 
 		<include>GlobalBackgroundOL</include>
 
 		<control type="button" id="500">
@@ -155,11 +157,11 @@
 			  <aspectratio>keep</aspectratio>
 		</control>
 
-		<!-- <include>Tijd</include>
+		<include>Tijd</include>
 
 		<include>Speed</include>
 
-		<include>Equalizer</include> -->
+		<!--<include>Equalizer</include> -->
 
 	</controls>
 

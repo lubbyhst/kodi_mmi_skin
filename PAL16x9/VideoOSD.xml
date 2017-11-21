@@ -1,244 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="2901">
-	<defaultcontrol always="true">14</defaultcontrol>
+	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
+<control type="group">
+			<posx>20</posx>
+			<posy>100</posy>
 
-		<control type="group">
-			<posx>0</posx>
-			<posy>10</posy>
+			<control type="image" id="21">
+				<posx>5</posx>
+				<posy>36</posy>
+				<width>32</width>
+				<height>100</height>
+				<texture>boog.png</texture>
+			</control>
 
-			<control type="image">
+			<control type="list" id="50">
 				<posx>0</posx>
-				<posy>-10</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>other_textures/black-back.png</texture>
-				<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
-				<visible>Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings)</visible>
-			</control>
-
-			<control type="group">
-				<visible>!Window.IsVisible(sliderdialog)</visible>
-
-				<control type="image">
-					<posx>440</posx>
-					<posy>70</posy>
-					<width>400</width>
-					<height>50</height>
-					<texture border="22,0,22,22">other_textures/DialogContextBottom.png</texture>
-				</control>
-
-				<control type="label">
-					<description>Current Control</description>
-					<posx>470</posx>
-					<posy>63</posy>
-					<width>340</width>
-					<align>center</align>
-					<label>$INFO[System.CurrentControl]</label>
-				</control>
-
-			<!-- 	<control type="image">
-					<posx>120</posx>
-					<posy>-80</posy>
-					<width>1040</width>
-					<height>160</height>
-					<texture border="22">other_textures/ContentPanel.png</texture>
-				</control> -->
-
-				<!-- <control type="grouplist" id="100">
-					<posx>20</posx>
-					<posy>2</posy>
-					<width>500</width>
-					<height>60</height>
-					<itemgap>2</itemgap>
-					<orientation>horizontal</orientation>
-					<align>left</align>
-					<onleft>6</onleft>
-					<onright>12</onright>
-					<onup>-</onup>
-					<ondown>-</ondown>
-
-					<control type="button" id="1">
-						<description>Bookmarks</description>
-						<width>50</width>
-						<height>50</height>
-						<label>298</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/BookMarksFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/BookMarksNF.png</texturenofocus>
-						<onclick>ActivateWindow(125)</onclick>
-					</control>
-
-					<control type="button" id="2">
-						<description>Audio Settings</description>
-						<width>50</width>
-						<height>50</height>
-						<label>13396</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/AudioFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/AudioNF.png</texturenofocus>
-						<onclick>ActivateWindow(124)</onclick>
-					</control>
-
-					<control type="button" id="3">
-						<description>Video Settings</description>
-						<width>50</width>
-						<height>50</height>
-						<label>13395</label>
-						<align>left</align>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/VideoFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/VideoNF.png</texturenofocus>
-						<onclick>ActivateWindow(123)</onclick>
-					</control> -->
-
-				</control>
-
-				<control type="grouplist" id="101">
-					<posx>120</posx>
-					<posy>-82</posy>
-					<width>500</width>
-					<height>60</height>
-					<itemgap>2</itemgap>
-					<orientation>horizontal</orientation>
-					<align>center</align>
-					<onleft>3</onleft>
-					<onright>4</onright>
-					<onup>-</onup>
-					<ondown>-</ondown>
-
-					<control type="button" id="12">
+				<posy>35</posy>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<content>
+					<item id="1">
 						<description>Skip Back</description>
-						<width>50</width>
-						<height>50</height>
-						<label>210</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/PrevTrackFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/PrevTrackNF.png</texturenofocus>
-						<onclick>PlayerControl(Previous)</onclick>
-					</control>
-
-					<control type="button" id="13">
+						<label>31062</label>
+						<label2>31062</label2>
+						<onclick>playercontrol(previous)</onclick>
+						<property name="previous">true</property>
+					</item>
+					<item id="2">
 						<description>Rewind</description>
-						<width>50</width>
-						<height>50</height>
 						<label>31036</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/RewindFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/RewindNF.png</texturenofocus>
+						<label2>31036</label2>
 						<onclick>PlayerControl(Rewind)</onclick>
-					</control>
-
-					<control type="togglebutton" id="14">
+						<property name="rewind">true</property>
+					</item>
+					<item id="3">
 						<description>Play/Pause</description>
-						<width>50</width>
-						<height>50</height>
 						<label>31037</label>
-						<altlabel>208</altlabel>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/PauseFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/PauseNF.png</texturenofocus>
-						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<alttexturefocus>other_textures/OSD/PlayFO.png</alttexturefocus>
-						<alttexturenofocus>other_textures/OSD/PlayNF.png</alttexturenofocus>
+						<label2>31064</label2>
 						<onclick>PlayerControl(Play)</onclick>
-					</control>
-
-					<control type="button" id="15">
-						<description>Stop</description>
-						<width>50</width>
-						<height>50</height>
-						<label>31038</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/StopFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/StopNF.png</texturenofocus>
-						<onclick>PlayerControl(Stop)</onclick>
-					</control>
-
-					<control type="button" id="16">
+						<property name="playPause">true</property>
+						<property name="stopRewinding">31066</property>
+						<property name="stopForwarding">31065</property>
+					</item>
+					<item id="4">
 						<description>Fast Forward</description>
-						<width>50</width>
-						<height>50</height>
 						<label>31039</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/ForwardFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/ForwardNF.png</texturenofocus>
+						<label2>31039</label2>
 						<onclick>PlayerControl(Forward)</onclick>
-					</control>
-
-					<control type="button" id="17">
+						<property name="forward">true</property>
+					</item>
+					<item id="5">
 						<description>Next</description>
-						<width>50</width>
-						<height>50</height>
-						<label>209</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/NextTrackFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/NextTrackNF.png</texturenofocus>
-						<onclick>PlayerControl(Next)</onclick>
+						<label>31063</label>
+						<label2>31063</label2>
+						<onclick>playercontrol(next)</onclick>
+						<property name="next">true</property>
+					</item>
+				</content>
+				<viewtype label="535">list</viewtype>
+				<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
+					<effect type="fade" start="100" end="50" time="200" />
+					<effect type="zoom" center="860,360" start="100" end="90"
+						time="200" />
+				</animation>
+				<itemlayout width="200" height="20">
+					<control type="label">
+						<posx>40</posx>
+						<width>217</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffff6a00</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>false</scroll>
+						<visible>!Player.Paused + !ListItem.Property(playPause)</visible>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<width>217</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>dimgray</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>false</scroll>
+						<visible>Player.Paused + !ListItem.Property(playPause)</visible>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<width>217</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffff6a00</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>false</scroll>
+						<visible>Player.Paused + ListItem.Property(playPause)</visible>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<width>217</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffff6a00</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>false</scroll>
+						<visible>!Player.Paused + !Player.Rewinding + !Player.Forwarding +
+							ListItem.Property(playPause)</visible>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<width>217</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffff6a00</textcolor>
+						<label>$INFO[ListItem.Property(stopRewinding)]</label>
+						<scroll>false</scroll>
+						<visible>Player.Rewinding + ListItem.Property(playPause)</visible>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<width>217</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffff6a00</textcolor>
+						<label>$INFO[ListItem.Property(stopForwarding)]</label>
+						<scroll>false</scroll>
+						<visible>Player.Forwarding + ListItem.Property(playPause)
+						</visible>
+					</control>
+				</itemlayout>
+
+				<focusedlayout width="200" height="20">
+
+					<control type="label" id="51">
+						<posx>40</posx>
+						<width>220</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+						<visible>!Player.Paused + !ListItem.Property(playPause)</visible>
 					</control>
 
-				</control>
-
-<!-- 				<control type="grouplist" id="102">
-					<posx>640</posx>
-					<posy>2</posy>
-					<width>500</width>
-					<height>60</height>
-					<itemgap>2</itemgap>
-					<orientation>horizontal</orientation>
-					<align>right</align>
-					<onleft>17</onleft>
-					<onright>1</onright>
-					<onup>-</onup>
-					<ondown>-</ondown>
-
-					<control type="button" id="4">
-						<description>Subtitles</description>
-						<width>50</width>
-						<height>50</height>
-						<label>287</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/SubtitlesFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/SubtitlesNF.png</texturenofocus>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
-						<visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
+					<control type="label" id="51">
+						<posx>40</posx>
+						<width>220</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>dimgray</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+						<visible>Player.Paused + !ListItem.Property(playPause)</visible>
 					</control>
 
-					<control type="button" id="5">
-						<description>Subtitles</description>
-						<width>50</width>
-						<height>50</height>
-						<label>287</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/SubtitlesFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/SubtitlesNF.png</texturenofocus>
-						<onclick>Close</onclick>
-						<onclick>XBMC.RunScript($INFO[Skin.String(SubtitlesPath)])</onclick>
-						<visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
+					<control type="label" id="52">
+						<posx>40</posx>
+						<width>220</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>true</scroll>
+						<visible>Player.Paused + ListItem.Property(playPause)</visible>
 					</control>
 
-					<control type="button" id="6">
-						<description>DVD menu</description>
-						<width>50</width>
-						<height>50</height>
-						<label>31041</label>
-						<font>-</font>
-						<texturefocus>other_textures/OSD/DvdFO.png</texturefocus>
-						<texturenofocus>other_textures/OSD/DvdNF.png</texturenofocus>
-						<onclick>PlayerControl(ShowVideoMenu)</onclick>
-						<enable>VideoPlayer.HasMenu</enable>
+					<control type="label" id="53">
+						<posx>40</posx>
+						<width>220</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+						<visible>!Player.Paused + !Player.Rewinding + !Player.Forwarding +
+							ListItem.Property(playPause)</visible>
 					</control>
 
-				</control> -->
+					<control type="label" id="54">
+						<posx>40</posx>
+						<width>220</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Property(stopRewinding)]</label>
+						<scroll>true</scroll>
+						<visible>Player.Rewinding + ListItem.Property(playPause)</visible>
+					</control>
 
+					<control type="label" id="55">
+						<posx>40</posx>
+						<width>220</width>
+						<height>20</height>
+						<font>Medium</font>
+						<textcolor>ffffffff</textcolor>
+						<label>$INFO[ListItem.Property(stopForwarding)]</label>
+						<scroll>true</scroll>
+						<visible>Player.Forwarding + ListItem.Property(playPause)
+						</visible>
+					</control>
+
+					<control type="image">
+						<posx>0</posx>
+						<width>36</width>
+						<height>20</height>
+						<texture>other_textures/pointer0.png</texture>
+						<animation effect="fade" start="100" end="50"
+							condition="!Control.HasFocus(50)">Conditional</animation>
+						<visible>ListItem.Property(previous)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>36</width>
+						<height>20</height>
+						<texture>other_textures/pointer1.png</texture>
+						<animation effect="fade" start="100" end="50"
+							condition="!Control.HasFocus(50)">Conditional</animation>
+						<visible>ListItem.Property(rewind)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>36</width>
+						<height>20</height>
+						<texture>other_textures/pointer2.png</texture>
+						<animation effect="fade" start="100" end="50"
+							condition="!Control.HasFocus(50)">Conditional</animation>
+						<visible>ListItem.Property(playPause)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>36</width>
+						<height>20</height>
+						<texture>other_textures/pointer4.png</texture>
+						<animation effect="fade" start="100" end="50"
+							condition="!Control.HasFocus(50)">Conditional</animation>
+						<visible>ListItem.Property(forward)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<width>36</width>
+						<height>20</height>
+						<texture>other_textures/pointer5.png</texture>
+						<animation effect="fade" start="100" end="50"
+							condition="!Control.HasFocus(50)">Conditional</animation>
+						<visible>ListItem.Property(next)</visible>
+					</control>
+				</focusedlayout>
 			</control>
-
 		</control>
-
 	</controls>
 
 </window>
