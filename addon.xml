@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="skin.audi_rns_e"
-	version="0.0.17"
-	name="Audi RNS-E"
+	id="skin.audi_mmi"
+	version="0.0.18"
+	name="Audi MMI skin"
 	provider-name=" ">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
@@ -17,6 +17,6 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary>Skin</summary>
-		<description>'AudiRns' is a lookalike of the oem version of Audi's Rns-e</description>
+		<description>'Audi MMI 3G skin' is a lookalike of the oem version of Audi's MMI 3G</description>
 	</extension>
 </addon>
