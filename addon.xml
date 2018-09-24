@@ -17,6 +17,6 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary>Skin</summary>
-		<description>'Audi MMI 3G skin' is a lookalike of the oem version of Audi's MMI 3G</description>
+		<description>'Audi MMI skin' is a lookalike of the oem version of Audi's MMI</description>
 	</extension>
 </addon>
